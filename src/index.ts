@@ -71,3 +71,30 @@ point = { x: 1, y: 1 }; // Error
 // All other behaviours are the same as `let`
 point.x = 123;
 point.y = 456;
+
+function add(a: number, b: number): number {
+  return a + b;
+}
+
+function log(message: string): void {
+  console.log("LOG:", message);
+}
+
+function sum(...values: number[]) {
+  return values.reduce((previous, current) => {
+    return previous + current;
+  });
+}
+
+sum(1, 2); // 3
+sum(1, 2, 3); // 6
+
+type Add = (a: number, b: number) => number;
+
+let add2: Add;
+
+add2 = function (a: number, b: number): number {
+  return a + b;
+};
+
+add2 = (a, b) => a + b;
