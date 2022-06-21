@@ -44,3 +44,30 @@ tuple = [2, 6];
 tuple = [5]; // Error: must be 2 items
 tuple = [5, 4, 3]; // Error: must be 2 items
 tuple = ["elite", 1337]; // Error: must be number
+
+/////////////
+
+let center: { x: number; y: number } = {
+  x: 0,
+  y: 0,
+};
+
+let unit: { x: number; y: number } = {
+  x: 1,
+  y: 1,
+};
+
+type Point = { x: number; y: number };
+
+let objectExample: Point = {
+  x: 2,
+  y: 2,
+};
+
+const point: Point = { x: 0, y: 0 };
+
+point = { x: 1, y: 1 }; // Error
+
+// All other behaviours are the same as `let`
+point.x = 123;
+point.y = 456;
