@@ -127,3 +127,28 @@ function takesPoint3D(point: Point3D) {
   /** ... */
 }
 takesPoint3D(point2D);
+
+class Animal {
+  private name: string;
+  protected nick: string;
+
+  constructor(name: string, nick: string) {
+    this.name = name;
+    this.nick = nick;
+  }
+
+  public move(distanceInMeters: number): void {
+    console.log(`${this.name} ${this.nick} moved ${distanceInMeters}`);
+  }
+}
+
+let cat = new Animal("Cat", "Fluffy");
+cat.move(10);
+cat.name = "Dog";
+cat.nick = "Puppy";
+
+class Bird extends Animal {
+  fly(distanceInMeters: number) {
+    console.log(`${this.name} ${this.nick} flew ${distanceInMeters}`);
+  }
+}
