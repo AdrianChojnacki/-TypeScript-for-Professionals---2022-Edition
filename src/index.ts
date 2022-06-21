@@ -170,3 +170,26 @@ queue2.push("Hello world");
 
 console.log(queue2.pop().toPrecision(1));
 console.log(queue2.pop().toPrecision(1));
+
+let exampleAny: any;
+let exampleUnknown: unknown;
+
+// any
+exampleAny = 123;
+exampleAny = "Hello";
+
+// unknown
+exampleUnknown = 123;
+exampleUnknown = "Hello";
+
+// any
+exampleAny.allows.anything.you.can.imagine();
+let anySetBool: boolean = exampleAny;
+
+// unknown
+if (typeof exampleUnknown == "string") {
+  exampleUnknown.trim();
+}
+if (typeof exampleUnknown == "boolean") {
+  let unknownSetBool: boolean = exampleUnknown;
+}
