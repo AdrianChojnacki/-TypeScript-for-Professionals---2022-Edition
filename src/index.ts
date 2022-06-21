@@ -152,3 +152,21 @@ class Bird extends Animal {
     console.log(`${this.name} ${this.nick} flew ${distanceInMeters}`);
   }
 }
+
+/** A FIFO (First In First Out) collection */
+class Queue2<T> {
+  data = [];
+  push(item: T) {
+    this.data.push(item);
+  }
+  pop(): T {
+    return this.data.shift();
+  }
+}
+
+const queue2 = new Queue2<number>();
+queue2.push(123);
+queue2.push("Hello world");
+
+console.log(queue2.pop().toPrecision(1));
+console.log(queue2.pop().toPrecision(1));
