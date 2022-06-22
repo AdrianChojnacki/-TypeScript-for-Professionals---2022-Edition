@@ -222,3 +222,22 @@ function log3(value: unknown) {
 
 log3(123.1223);
 log3("Hello");
+
+let hello2 = load();
+
+if (typeof hello2 === "string") {
+  const trimmed = hello.trim();
+}
+const trimmed2 = (hello2 as string).trim();
+const trimmed3 = (<string>hello).trim(); // Doesn't work in .tsx files
+
+let leet;
+
+// Later
+leet = "1337";
+
+// Use as number
+const number = +leet;
+
+console.log(number === 1337); // true
+console.log(number); // '1337'
