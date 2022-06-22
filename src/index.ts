@@ -193,3 +193,14 @@ if (typeof exampleUnknown == "string") {
 if (typeof exampleUnknown == "boolean") {
   let unknownSetBool: boolean = exampleUnknown;
 }
+
+let someLegacyVariable1: any;
+let someLegacyVariable2: unknown;
+
+someLegacyVariable1 = toString();
+console.log(someLegacyVariable1.trim());
+
+someLegacyVariable2 = toString();
+if (typeof someLegacyVariable2 == "string") {
+  console.log(someLegacyVariable2.trim());
+}
