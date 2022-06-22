@@ -204,3 +204,21 @@ someLegacyVariable2 = toString();
 if (typeof someLegacyVariable2 == "string") {
   console.log(someLegacyVariable2.trim());
 }
+
+function log2(value: any) {
+  console.log(value.toFixed(2));
+}
+
+log2(123.1223);
+log2("Hello");
+
+function log3(value: unknown) {
+  if (typeof value == "number") {
+    console.log(value.toFixed(2));
+  } else {
+    console.log(value);
+  }
+}
+
+log3(123.1223);
+log3("Hello");
