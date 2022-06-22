@@ -241,3 +241,13 @@ const number = +leet;
 
 console.log(number === 1337); // true
 console.log(number); // '1337'
+
+/**
+ * @returns true if the input string is a palindrome
+ */
+export function isPalindrome(str: string): boolean {
+  return str === str.split("").reverse().join("");
+}
+
+console.log(isPalindrome("madam")); // true
+console.log(isPalindrome("madan")); // false
