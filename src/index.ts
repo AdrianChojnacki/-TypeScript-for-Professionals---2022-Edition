@@ -251,3 +251,17 @@ export function isPalindrome(str: string): boolean {
 
 console.log(isPalindrome("madam")); // true
 console.log(isPalindrome("madan")); // false
+
+console.log("Logged in user:", process.env.USER);
+
+import fs from "fs";
+fs.writeFileSync("hello.txt", "Hello world");
+
+import express from "express";
+const app = express();
+app.get("/", function (req, res) {
+  res.send("Hello World");
+});
+app.listen(3000, () => {
+  console.log("Server started");
+});
